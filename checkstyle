@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ROOT_FOLDER=build/bin
+VERSION=8.36.1
+CHECKSTYLE_BIN=$ROOT_FOLDER/checkstyle-$VERSION.jar
+mkdir -p $ROOT_FOLDER
+if [ ! -f "$CHECKSTYLE_BIN" ]; then
+  echo "Please wait, first download..."
+  rm -f $ROOT_FOLDER/checkstyle-*
+  curl -sSL https://github.com/checkstyle/checkstyle/releases/download/checkstyle-$VERSION/checkstyle-$VERSION-all.jar --output $CHECKSTYLE_BIN
+  chmod a+x $CHECKSTYLE_BIN
+fi
+
+java -jar $CHECKSTYLE_BIN ./ -c .github/workflows/assets/google_checks.xml
+echo "Done!"
