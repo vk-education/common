@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "938306791287",
+    "firebase_url": "https://tindog-tp.firebaseio.com",
+    "project_id": "tindog-tp",
+    "storage_bucket": "tindog-tp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938306791287:android:b8975be7fc184998dbe372",
+        "android_client_info": {
+          "package_name": "com.example.first"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "938306791287-g9r6eiqbkogq3c36higabcdkc7sgi3u7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeWYa_6cLq2QW0maK4if3EyRR_HMKpqFU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "938306791287-g9r6eiqbkogq3c36higabcdkc7sgi3u7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

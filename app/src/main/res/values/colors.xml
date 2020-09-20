@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F8BBD0</color>
+    <color name="colorPrimaryBright">#F48FB1</color>
+    <color name="colorPrimaryDark">#880E4F</color>
+    <color name="textFields">#70F8BBD0</color>
+    <color name="black">#000</color>
+    <color name="white">#ffffff</color>
+    <color name="toLike">#9CCC65</color>
+    <color name="toDislike">#ef5350</color>
+    <color name="pageTitle">#60E91E63</color>
+>>>>>>> f2abbce145fd1c3b0dd65946bf229a4e300b4d3d
+</resources>

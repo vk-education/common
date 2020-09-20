@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/matches"
+        android:title="@string/matches"
+        android:icon="@drawable/love"/>
+
+    <item
+        android:id="@+id/cards"
+        android:title="@string/dogs"
+        android:icon="@drawable/ic_pets_black_24dp"/>
+
+    <item
+        android:id="@+id/profile"
+        android:title="@string/profile"
+        android:icon="@drawable/profile"/>
+
+</menu>
