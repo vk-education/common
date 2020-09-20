@@ -41,7 +41,7 @@ jobs:
         with:
           java-version: 1.8
       - name: Build internal release
-        run: ./gradlew assembleInternal -Dversion_code=${{ github.run_number }} -Dversion_name="0.1.${{ github.run_number }}"
+        run: ./gradlew assembleDebug -Dversion_code=${{ github.run_number }} -Dversion_name="0.1.${{ github.run_number }}"
       - name: Prepare key
         run: |
           echo ::set-env name=DEBUG_KEY::$( openssl base64 < .github/workflows/assets/debug.jks | tr -d '\n' )
@@ -49,7 +49,7 @@ jobs:
         id: sign_internal_release
         uses: r0adkll/sign-android-release@v1
         with:
-          releaseDirectory: app/build/outputs/apk/internal
+          releaseDirectory: app/build/outputs/apk/debug
           signingKeyBase64: ${{ env.DEBUG_KEY }}
           alias: key0
           keyStorePassword: 123456
