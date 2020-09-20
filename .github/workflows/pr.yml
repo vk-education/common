@@ -41,7 +41,7 @@ jobs:
         with:
           java-version: 1.8
       - name: Build internal release
-        run: ./gradlew assembleDebug -Dversion_code=${{ github.run_number }} -Dversion_name="0.1.${{ github.run_number }}"
+        run: ./gradlew assembleDebug
       - name: Prepare key
         run: |
           echo ::set-env name=DEBUG_KEY::$( openssl base64 < .github/workflows/assets/debug.jks | tr -d '\n' )
