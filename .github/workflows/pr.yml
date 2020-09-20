@@ -30,7 +30,7 @@ jobs:
         run: ./ktlint
       - name: detekt
         run: ./detekt
-      - name: detekt
+      - name: checkstyle
         run: ./checkstyle
   check_release_aseemble:
     runs-on: ubuntu-latest
