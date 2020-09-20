@@ -11,5 +11,5 @@ if [ ! -f "$CHECKSTYLE_BIN" ]; then
   chmod a+x $CHECKSTYLE_BIN
 fi
 
-java -jar $CHECKSTYLE_BIN ./ -c .github/workflows/assets/google_checks.xml
+java -jar $CHECKSTYLE_BIN ./ -c .github/workflows/assets/andriod_checkstyle.xml
 echo "Done!"
