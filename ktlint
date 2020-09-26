@@ -12,6 +12,7 @@ if [ ! -f "$KTLINT_BIN" ]; then
   curl -sSL https://github.com/pinterest/ktlint/releases/download/$VERSION/ktlint --output $KTLINT_BIN
   chmod a+x $KTLINT_BIN
 fi
+
 if [ $CI ]; then
   export REVIEWDOG_GITHUB_API_TOKEN="${GITHUB_TOKEN}"
   $KTLINT_BIN --android --reporter=checkstyle |
@@ -20,7 +21,7 @@ if [ $CI ]; then
       -reporter="github-pr-review" \
       -fail-on-error="true"
 else
-  $KTLINT_BIN --android
+  $KTLINT_BIN --android -F
 fi
 
 echo "Done!"
