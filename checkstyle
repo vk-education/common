@@ -13,5 +13,16 @@ if [ ! -f "$CHECKSTYLE_BIN" ]; then
   chmod a+x $CHECKSTYLE_BIN
 fi
 
-java -jar $CHECKSTYLE_BIN ./ -c .github/workflows/assets/andriod_checkstyle.xml
+if [ $CI ]; then
+  export REVIEWDOG_GITHUB_API_TOKEN="${GITHUB_TOKEN}"
+  java -jar $CHECKSTYLE_BIN ./ -c .github/workflows/assets/aandroid_checkstyle.xml -f xml |
+    reviewdog -f=checkstyle \
+      -name="reviewdog" \
+      -reporter="github-pr-check" \
+      -filter-mode="added" \
+      -fail-on-error="false" \
+      -level="info"
+else
+  java -jar $CHECKSTYLE_BIN ./ -c .github/workflows/assets/android_checkstyle.xml
+fi
 echo "Done!"
