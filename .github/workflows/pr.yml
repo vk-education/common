@@ -21,6 +21,8 @@ jobs:
   static_analysis:
     runs-on: ubuntu-latest
     steps:
+      - name: Install reviewdog
+        run: curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s
       - uses: actions/checkout@v2
       - uses: actions/cache@v2
         name: cache
@@ -43,6 +45,8 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
+      - name: Set up permission
+        run: chmod +x gradlew
       - name: Build internal release
         run: ./gradlew assembleDebug
       - name: Prepare key
