@@ -30,8 +30,12 @@ jobs:
           path: build/bin
           key: ${{ runner.os }}
       - name: ktlint
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: ./ktlint
       - name: detekt
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: ./detekt
       - name: checkstyle
         env:

@@ -17,7 +17,7 @@ if [ $CI ]; then
   export REVIEWDOG_GITHUB_API_TOKEN="${GITHUB_TOKEN}"
   java -jar $CHECKSTYLE_BIN ./ -c .github/workflows/assets/android_checkstyle.xml -f xml |
     reviewdog -f=checkstyle \
-      -name="reviewdog" \
+      -name="checkstyle" \
       -reporter="github-pr-review" \
       -fail-on-error="true"
 else
