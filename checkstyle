@@ -18,10 +18,8 @@ if [ $CI ]; then
   java -jar $CHECKSTYLE_BIN ./ -c .github/workflows/assets/android_checkstyle.xml -f xml |
     reviewdog -f=checkstyle \
       -name="reviewdog" \
-      -reporter="github-pr-check" \
-      -filter-mode="added" \
-      -fail-on-error="false" \
-      -level="info"
+      -reporter="github-pr-review" \
+      -fail-on-error="true"
 else
   java -jar $CHECKSTYLE_BIN ./ -c .github/workflows/assets/android_checkstyle.xml
 fi
