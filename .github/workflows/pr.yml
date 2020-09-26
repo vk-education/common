@@ -29,6 +29,10 @@ jobs:
         with:
           path: build/bin
           key: ${{ runner.os }}
+      - name: checkstyle
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./checkstyle
       - name: ktlint
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -37,10 +41,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: ./detekt
-      - name: checkstyle
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./checkstyle
   check_release_aseemble:
     runs-on: ubuntu-latest
     steps:
