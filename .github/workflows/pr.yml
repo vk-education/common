@@ -21,20 +21,26 @@ jobs:
   static_analysis:
     runs-on: ubuntu-latest
     steps:
+      - name: Install reviewdog
+        run: sudo su -c 'wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s -- -b /usr/local/bin/ v0.10.2'
       - uses: actions/checkout@v2
       - uses: actions/cache@v2
         name: cache
         with:
           path: build/bin
           key: ${{ runner.os }}
-      - name: ktlint
-        run: ./ktlint
-      - name: detekt
-        run: ./detekt
       - name: checkstyle
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: ./checkstyle
+      - name: ktlint
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./ktlint
+      - name: detekt
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./detekt
   check_release_aseemble:
     runs-on: ubuntu-latest
     steps:
@@ -43,6 +49,8 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
+      - name: Set up permission
+        run: chmod +x gradlew
       - name: Build internal release
         run: ./gradlew assembleDebug
       - name: Prepare key

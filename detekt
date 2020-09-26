@@ -13,5 +13,16 @@ if [ ! -f "$DETEKT_BIN" ]; then
   chmod a+x $DETEKT_BIN
 fi
 
-$DETEKT_BIN --config .github/workflows/assets/detekt.yml
+if [ $CI ]; then
+  export REVIEWDOG_GITHUB_API_TOKEN="${GITHUB_TOKEN}"
+  $DETEKT_BIN --config .github/workflows/assets/detekt.yml --report xml:detekt_report.xml
+
+  reviewdog -f=checkstyle \
+      -name="detekt" \
+      -reporter="github-pr-review" \
+      -fail-on-error="true" <detekt_report.xml
+else
+  $DETEKT_BIN --config .github/workflows/assets/detekt.yml
+fi
+
 echo "Done!"
