@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tindog</string>
+    <string name="emailHint">Почта</string>
+    <string name="edit_gallery">Редактирование галереи</string>
+    <string name="addressSampleData">Ленина, 33</string>
+    <string name="sign_out">Выход</string>
+    <string name="bobik">Бобик</string>
+    <string name="cancel">Отмена</string>
+    <string name="newMatch">новый</string>
+    <string name="phoneSampleData">8-(915)-019-6019</string>
+    <string name="citySampleData">Москва</string>
+    <string name="ageSampleData">7 лет</string>
+    <string name="bulldogSampleData">Бульдог</string>
+    <string name="back_to_authorization">Назад в авторизацию</string>
+    <string name="right_to_like">По душе!</string>
+    <string name="left_to_dislike">Не гоже!</string>
+    <string name="swipe">ЛИСТНИ</string>
+    <string name="profile">профиль</string>
+    <string name="dogs">собаки</string>
+    <string name="matches">взаимности</string>
+    <string name="done_editing">сохранить</string>
+    <string name="phoneHint">Номер телефона</string>
+    <string name="addressHint">Адрес</string>
+    <string name="cityHint">Город</string>
+    <string name="countryHint">Страна</string>
+    <string name="ageHint">Возраст</string>
+    <string name="breedHint">Порода</string>
+    <string name="authTitle">"Изменить "</string>
+    <string name="passwordHint">пароль</string>
+    <string name="loginBtnText">вход</string>
+    <string name="registrationBtnName">новенький?</string>
+    <string name="nameHint">Мое имя</string>
+    <string name="registrateBtnText">Зарегистрировать</string>
+    <string name="myProfileName">Мой профиль</string>
+    <string name="matchesTitle">Взаимности</string>
+    <string name="registrationTitle">Регистрация</string>
+    <string name="profileEditingTitle">Редактирование</string>
+    <string name="noMatches">Нету взаимностей(((</string>
+    <string name="saveBtn">Сохранить</string>
+    <string name="citata">Обернись и сделай ГАВ. Возможно твоя любовь где-то рядом</string>
+    <string name="change_photo">Изменить фото профиля</string>
+    <string name="testName">ИмяТест</string>
+    <string name="testBreed">ПородаТест</string>
+    <string name="hello_blank_fragment">Пустой фрагмент</string>
+</resources>

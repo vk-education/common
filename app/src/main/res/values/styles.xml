@@ -1,0 +1,88 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimaryBright</item>
+    </style>
+
+    <style name="editsStyle">
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="fontFamily">@font/roboto</item>
+        <item name="boxBackgroundMode">filled</item>
+    </style>
+
+    <style name="appBarText">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textSize">@dimen/text_size20</item>
+    </style>
+
+    <style name="topAppBar" parent="@style/Widget.MaterialComponents.Toolbar.Primary">
+        <item name="titleTextColor">@color/black</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+    </style>
+
+    <style name="pageText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:gravity">top</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size20</item>
+    </style>
+
+    <style name="pageTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size30</item>
+    </style>
+
+    <style name="backgroundStyle">
+        <item name="android:src">@drawable/bg</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:alpha">0.2</item>
+    </style>
+
+    <style name="TextViewStyle">
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+        <item name="layout_constraintRight_toRightOf">parent</item>
+    </style>
+
+    <style name="button" parent="@style/Widget.AppCompat.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="backgroundTint">@color/colorPrimaryBright</item>
+        <item name="android:textSize">@dimen/text_size16</item>
+    </style>
+
+    <style name="borderlessBtn" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size16</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="cornerRadius">4dp</item>
+        <item name="strokeColor">@color/colorPrimaryBright</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+</resources>

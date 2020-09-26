@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Account.AccountEdit.AccountEditActivity">
+
+
+    <ImageView
+        android:id="@+id/background"
+        style="@style/backgroundStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/background" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".Account.AccountEdit.AccountEditActivity">
+
+          <com.google.android.material.appbar.AppBarLayout
+              android:id="@+id/title"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              app:layout_constraintTop_toTopOf="parent">
+              <com.google.android.material.appbar.MaterialToolbar
+                  android:id="@+id/topAppBar"
+                  app:navigationIcon="@drawable/cancel"
+                  app:titleTextAppearance="@style/appBarText"
+                  app:title="@string/profileEditingTitle"
+                  style="@style/topAppBar" />
+          </com.google.android.material.appbar.AppBarLayout>
+
+          <androidx.constraintlayout.widget.ConstraintLayout
+              android:id="@+id/imageSettingLayout"
+              android:layout_width="match_parent"
+              android:layout_height="216dp"
+              app:layout_constraintTop_toBottomOf="@+id/title"
+              android:padding="5dp">
+
+              <ImageView
+                  android:id="@+id/imageView"
+                  tools:src="@color/colorPrimary"
+                  android:layout_width="150dp"
+                  android:layout_height="150dp"
+                  android:layout_marginVertical="8dp"
+                  android:scaleType="centerCrop"
+                  app:layout_constraintTop_toTopOf="@id/imageSettingLayout"
+                  app:layout_constraintRight_toRightOf="parent"
+                  app:layout_constraintLeft_toLeftOf="parent"
+                  android:contentDescription="@string/background" />
+
+              <Button
+                  android:id="@+id/changePhotoBtn"
+                  style="@style/button"
+                  android:text="@string/change_photo"
+                  app:layout_constraintRight_toRightOf="parent"
+                  app:layout_constraintLeft_toLeftOf="parent"
+                  app:layout_constraintTop_toBottomOf="@+id/imageView" />
+          </androidx.constraintlayout.widget.ConstraintLayout>
+
+          <LinearLayout
+              android:id="@+id/textEdits"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="24dp"
+              android:layout_marginLeft="16dp"
+              android:layout_marginRight="16dp"
+              android:orientation="vertical"
+              app:layout_constraintTop_toBottomOf="@+id/imageSettingLayout"
+              android:gravity="center">
+
+              <com.google.android.material.textfield.TextInputLayout
+                  android:id="@+id/nameField"
+                  android:theme="@style/editsStyle"
+                  app:boxStrokeColor="@color/colorPrimaryDark"
+                  app:hintTextColor="@color/colorPrimaryDark"
+                  android:textColorHint="@color/colorPrimaryDark"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+                  <com.google.android.material.textfield.TextInputEditText
+                      android:id="@+id/nameFieldInp"
+                      android:background="@color/textFields"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:hint="@string/nameHint" />
+              </com.google.android.material.textfield.TextInputLayout>
+
+              <com.google.android.material.textfield.TextInputLayout
+                  android:id="@+id/emailField"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  app:boxStrokeColor="@color/colorPrimaryDark"
+                  app:hintTextColor="@color/colorPrimaryDark"
+                  android:textColorHint="@color/colorPrimaryDark"
+                  android:theme="@style/editsStyle">
+                  <com.google.android.material.textfield.TextInputEditText
+                      android:id="@+id/emailFieldInp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:background="@color/textFields"
+                      android:hint="@string/emailHint" />
+              </com.google.android.material.textfield.TextInputLayout>
+
+              <com.google.android.material.textfield.TextInputLayout
+                  android:id="@+id/dogBreedField"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  app:boxStrokeColor="@color/colorPrimaryDark"
+                  app:hintTextColor="@color/colorPrimaryDark"
+                  android:textColorHint="@color/colorPrimaryDark"
+                  android:theme="@style/editsStyle">
+                  <com.google.android.material.textfield.TextInputEditText
+                      android:id="@+id/dogBreedFieldInp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:background="@color/textFields"
+                      android:hint="@string/breedHint" />
+              </com.google.android.material.textfield.TextInputLayout>
+
+              <com.google.android.material.textfield.TextInputLayout
+                  android:id="@+id/dogAgeField"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  app:boxStrokeColor="@color/colorPrimaryDark"
+                  app:hintTextColor="@color/colorPrimaryDark"
+                  android:textColorHint="@color/colorPrimaryDark"
+                  android:theme="@style/editsStyle">
+                  <com.google.android.material.textfield.TextInputEditText
+                      android:id="@+id/dogAgeFieldInp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:background="@color/textFields"
+                      android:hint="@string/ageHint" />
+              </com.google.android.material.textfield.TextInputLayout>
+
+              <com.google.android.material.textfield.TextInputLayout
+                  android:id="@+id/countryField"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:theme="@style/editsStyle"
+                  app:boxStrokeColor="@color/colorPrimaryDark"
+                  app:hintTextColor="@color/colorPrimaryDark"
+                  android:textColorHint="@color/colorPrimaryDark">
+                  <com.google.android.material.textfield.TextInputEditText
+                      android:id="@+id/countryFieldInp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:background="@color/textFields"
+                      android:hint="@string/countryHint" />
+              </com.google.android.material.textfield.TextInputLayout>
+
+              <com.google.android.material.textfield.TextInputLayout
+                  android:id="@+id/cityField"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:theme="@style/editsStyle"
+                  app:boxStrokeColor="@color/colorPrimaryDark"
+                  app:hintTextColor="@color/colorPrimaryDark"
+                  android:textColorHint="@color/colorPrimaryDark">
+                  <com.google.android.material.textfield.TextInputEditText
+                      android:id="@+id/cityFieldInp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:background="@color/textFields"
+                      android:hint="@string/cityHint" />
+              </com.google.android.material.textfield.TextInputLayout>
+
+              <com.google.android.material.textfield.TextInputLayout
+                  android:id="@+id/addressField"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:theme="@style/editsStyle"
+                  app:boxStrokeColor="@color/colorPrimaryDark"
+                  app:hintTextColor="@color/colorPrimaryDark"
+                  android:textColorHint="@color/colorPrimaryDark">
+                  <com.google.android.material.textfield.TextInputEditText
+                      android:id="@+id/addressFieldInp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:background="@color/textFields"
+                      android:hint="@string/addressHint" />
+              </com.google.android.material.textfield.TextInputLayout>
+
+              <com.google.android.material.textfield.TextInputLayout
+                  android:id="@+id/phoneField"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:theme="@style/editsStyle"
+                  app:boxStrokeColor="@color/colorPrimaryDark"
+                  app:hintTextColor="@color/colorPrimaryDark"
+                  android:textColorHint="@color/colorPrimaryDark">
+                  <com.google.android.material.textfield.TextInputEditText
+                      android:id="@+id/phoneFieldInp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:background="@color/textFields"
+                      android:hint="@string/phoneHint" />
+              </com.google.android.material.textfield.TextInputLayout>
+
+              <Button
+                  android:id="@+id/saveBtn"
+                  style="@style/button"
+                  android:text="@string/done_editing"
+                  android:layout_margin="8dp"/>
+       </LinearLayout>
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
