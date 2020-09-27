@@ -53,15 +53,8 @@ jobs:
         run: chmod +x gradlew
       - name: Build internal release
         run: ./gradlew assembleDebug
-      - name: Prepare key
-        run: |
-          echo ::set-env name=DEBUG_KEY::$( openssl base64 < .github/workflows/assets/debug.jks | tr -d '\n' )
-      - name: Sign internal release
-        id: sign_internal_release
-        uses: r0adkll/sign-android-release@v1
+      - name: Upload debug apk
+        uses: actions/upload-artifact@v2
         with:
-          releaseDirectory: app/build/outputs/apk/debug
-          signingKeyBase64: ${{ env.DEBUG_KEY }}
-          alias: key0
-          keyStorePassword: 123456
-          keyPassword: 123456
+          name: App.apk
+          path: app/build/outputs/apk/debug/app-debug.apk
