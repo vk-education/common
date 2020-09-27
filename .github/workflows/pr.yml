@@ -63,4 +63,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: lionzxy/idea-cli-inspector-actions@v1
-        name: 💡 Check with IDEA Cli Inspector
+        name: 💡 Check with IDEA CLI Inspector
