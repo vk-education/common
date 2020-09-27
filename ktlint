@@ -20,7 +20,7 @@ if [ $CI ]; then
       -reporter="github-pr-review" \
       -fail-on-error="true"
 else
-  $KTLINT_BIN --android
+  $KTLINT_BIN --android "$@"
 fi
 
 echo "Done!"

@@ -21,6 +21,6 @@ if [ $CI ]; then
       -reporter="github-pr-review" \
       -fail-on-error="true"
 else
-  java -jar $CHECKSTYLE_BIN ./ -c .github/workflows/assets/android_checkstyle.xml
+  java -jar $CHECKSTYLE_BIN ./ -c .github/workflows/assets/android_checkstyle.xml "$@"
 fi
 echo "Done!"

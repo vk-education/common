@@ -22,7 +22,7 @@ if [ $CI ]; then
       -reporter="github-pr-review" \
       -fail-on-error="true" <detekt_report.xml
 else
-  $DETEKT_BIN --config .github/workflows/assets/detekt.yml
+  $DETEKT_BIN --config .github/workflows/assets/detekt.yml "$@"
 fi
 
 echo "Done!"
