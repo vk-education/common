@@ -58,3 +58,9 @@ jobs:
         with:
           name: App.apk
           path: app/build/outputs/apk/debug/app-debug.apk
+  idea_cli_check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: lionzxy/idea-cli-inspector-actions@v1
+        name: 💡 Check with IDEA Cli Inspector
