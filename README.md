@@ -1,24 +1,33 @@
-# Android-Simple-Image-Gallery
-A simple implementation of an image gallery app in android
+# Автоматические проверки для Технопроектов Android
 
-MainActivity displays all folders with images and the number of images it contains <br />
-<br />
-![](https://cdn-images-1.medium.com/max/800/1*EDp_VGFCP9mFgWtYzon1yA.jpeg)   
+В этом репозитории собраны автоматические проверки для студентов технопарка. Правила по которым они сформированны следуют стандартам индустрии и стайлгайдам крупных компаний (Google, Oracle)
 
-Displays all images in a given folder, in this case "FastSave" <br />
-<br />
-![](https://cdn-images-1.medium.com/max/800/1*BPW6PN1oXPQ7z0sWDsNyLg.jpeg) 
-<br />
+## Как этим пользоваться?
 
-Image slider/navigator <br />
-![](https://cdn-images-1.medium.com/max/800/1*PHx4xIYzq4Jom9pNAx36yw.jpeg) 
+1. Справа сверху есть кнопка `Use this template`. Необходимо клацнуть по ней.
 
-### [Read the article on Medium](https://android.jlelse.eu/android-simple-image-gallery-30c0f00abe64?source=friends_link&sk=c203004612a1f0d402db9084feca42d4)
+2. После того как вы создатите свой проект, в первую очередь, необходимо удалить этот файл и написать такой же, но про себя. При оформлении используется максимально простой формат файлов Markdown. Вот пример как выглядел бы README.md для моего проекта:
+```
+# Companion App
 
+Приложение для подбора людей на концерт. Вам нужно найти компаньона на любое мероприятие? Это лучшее приложение для этого!
 
+## Команда авторов
 
+- [Никита Куликов](https://github.com/LionZXY)
+- [Олег Морозенков](https://github.com/reo7sp)
+- [Михаил Волынов](https://github.com/StealthTech)
+- [Юрий Голубев](https://github.com/Ansile)
+```
+Как это выглядит можно глянуть [тут](https://gist.github.com/LionZXY/a6c7439da96172ec68a09f225818b73a)
+3. Отредактировать файл можно из интерфейса
+4. Дальше - важно. Новые изменения нужно создавать в отдельной ветке. Подробнее о процессе GitHub Flow можно почитать [на хабре](https://habr.com/ru/post/346066/)
+5. Перед стартом советую пройти курс по Git "Введение" вот [тут](https://learngitbranching.js.org/)
 
+Итак, форкаем репозиторий, редактируем README.md и добавляем новый код через feature-ветки. Не делайте изменения прямо в `master`!
 
+## Что в этом репозитории находится?
 
-
-
+- [CI.md](./CI.md) - описание как пользоваться локально инструментами
+- `.github` - папка со скриптами Github и ресурсами для CI (`.github/workflows/assets`)
+- `.idea` - тут лежат стили для проекта в Idea
