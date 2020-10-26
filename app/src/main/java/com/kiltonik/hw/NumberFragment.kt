@@ -53,9 +53,9 @@ class NumberFragment : Fragment() {
                 )
             else
                 setTextColor(
-                        view.context.resources.getColor(
-                                if (number % 2 == 0) R.color.red else R.color.blue
-                        )
+                    view.context.resources.getColor(
+                        if (number % 2 == 0) R.color.red else R.color.blue
+                    )
                 )
         }
     }

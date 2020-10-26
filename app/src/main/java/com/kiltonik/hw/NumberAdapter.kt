@@ -30,16 +30,16 @@ class NumberViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         numberText.text = number.toString()
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M)
             numberText.setTextColor(
-                    itemView.context.resources.getColor(
-                            if (number % 2 == 0) R.color.red else R.color.blue,
-                            itemView.context.theme
-                    )
+                itemView.context.resources.getColor(
+                    if (number % 2 == 0) R.color.red else R.color.blue,
+                    itemView.context.theme
+                )
             )
         else
             numberText.setTextColor(
-                    itemView.context.resources.getColor(
-                            if (number % 2 == 0) R.color.red else R.color.blue
-                    )
+                itemView.context.resources.getColor(
+                    if (number % 2 == 0) R.color.red else R.color.blue
+                )
             )
         numberText.setOnClickListener { numberClickListener(number) }
     }
