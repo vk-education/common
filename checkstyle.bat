@@ -9,6 +9,6 @@ if not exist %CHECKSTYLE_BIN% (
   curl.exe -sL "https://github.com/checkstyle/checkstyle/releases/download/checkstyle-%VERSION%/checkstyle-%VERSION%-all.jar" -o "%CHECKSTYLE_BIN%"
 )
 
-java -jar %CHECKSTYLE_BIN% ./ -c .github/workflows/assets/android_checkstyle.xml
+java -jar %CHECKSTYLE_BIN% ./ -c .github/workflows/assets/android_checkstyle.xml %*
 echo Done!
 PAUSE
