@@ -9,6 +9,6 @@ if not exist %KTLINT_BIN% (
   curl.exe -sL "https://github.com/pinterest/ktlint/releases/download/%VERSION%/ktlint" -o "%KTLINT_BIN%"
 )
 
-java -jar %KTLINT_BIN%
+java -jar %KTLINT_BIN% %*
 echo Done!
 PAUSE
