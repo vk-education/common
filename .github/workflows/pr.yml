@@ -32,10 +32,6 @@ jobs:
         with:
           path: build/bin
           key: ${{ runner.os }}
-      - name: 💚 Checkstyle
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./checkstyle
       - name: 💙 Ktlint
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
