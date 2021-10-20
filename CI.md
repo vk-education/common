@@ -5,9 +5,10 @@
 ## Запуск локально
 
 Для запуска проверки стиля кода необходимо запустить три скрипта:
-1. Run `./detekt` or `.\detekt.bat`
-2. Run `./ktlint` or `.\ktlint.bat`
-3. Run `./checkstyle` or `.\checkstyle.bat`
+1. Запустить `./detekt` или `.\detekt.bat`
+2. Запустить `./ktlint` или `.\ktlint.bat`
+3. Запустить `./checkstyle` или `.\checkstyle.bat`
+
 
 ## Исправление ошибок
 

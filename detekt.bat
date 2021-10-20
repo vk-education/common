@@ -9,6 +9,6 @@ if not exist %DETEKT_BIN% (
   curl.exe -sL "https://github.com/detekt/detekt/releases/download/v%VERSION%/detekt-cli-%VERSION%-all.jar" -o "%DETEKT_BIN%"
 )
 
-java -jar %DETEKT_BIN% --config .github/workflows/assets/detekt.yml
+java -jar %DETEKT_BIN% --config .github/workflows/assets/detekt.yml %*
 echo Done!
 PAUSE
